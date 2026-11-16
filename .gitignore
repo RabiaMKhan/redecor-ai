@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# builds
+frontend/build/
+.vercel/
+
+# local env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# old local image folder (images now live in MongoDB)
+backend/storage/
+
+# misc
+.DS_Store
+npm-debug.log*
+coverage/
