@@ -1,5 +1,7 @@
 # Redecor AI
 
+**Live demo: [redecorai.vercel.app](https://redecorai.vercel.app)**. Click "Try as a guest" to look around without signing up. The live demo runs in demo mode, so the analysis is a sample plan and the visual is a simple colour preview.
+
 Upload a photo of any room or part of your home. Redecor AI:
 
 1. **Analyses it**: a few paragraphs on what the space is like today and what already works.

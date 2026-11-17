@@ -89,14 +89,15 @@ The backend is its own Vercel project with root directory `backend` (the fronten
 
 | Variable | Value |
 |---|---|
-| `MONGODB_URI` | Added automatically by the MongoDB Atlas integration (Vercel dashboard → Storage → MongoDB Atlas → connect to this project) |
+| `MONGODB_URI` | Your Atlas connection string (Atlas → Connect → Drivers), or added automatically by the MongoDB Atlas integration. In Atlas, allow network access from anywhere (`0.0.0.0/0`), because Vercel's IPs change |
+| `MONGODB_DB` | `redecor_ai`: the database name, since Atlas links usually don't include one |
 | `JWT_SECRET` | Long random string |
 | `MEDIA_SECRET` | A different long random string |
-| `CLIENT_URL` | The frontend's Vercel URL, e.g. `https://redecor-ai.vercel.app` |
+| `CLIENT_URL` | The frontend's Vercel URL, comma separated, e.g. `https://redecorai.vercel.app` |
 | `AI_DEMO_MODE`, `VISUAL_DEMO_MODE` | `true` (no paid AI keys) |
 | `EMAIL_USER`, `EMAIL_PASS` | Your Gmail address and a Gmail [App Password](https://support.google.com/accounts/answer/185833) (needs 2-step verification), so sign-up codes are emailed |
 
-Add each one with `vercel env add NAME production` (or in the dashboard), then redeploy.
+Add each one with `vercel env add NAME --environment production` (or in the dashboard), then redeploy.
 
 ## API
 

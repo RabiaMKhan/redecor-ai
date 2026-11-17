@@ -9,6 +9,8 @@ const connectDB = (mongoUrl = getMongoUrl()) => {
     }
     return mongoose.connect(mongoUrl, {
         serverSelectionTimeoutMS: Number(process.env.DB_TIMEOUT_MS) || 10000,
+        // Atlas links often have no database name (Mongoose would use "test"); MONGODB_DB picks one
+        ...(process.env.MONGODB_DB && { dbName: process.env.MONGODB_DB }),
     });
 };
 
