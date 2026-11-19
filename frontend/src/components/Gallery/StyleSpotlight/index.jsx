@@ -17,7 +17,7 @@ const StyleSpotlight = ({ onOpen }) => {
                 <button
                     type="button"
                     onClick={() => onOpen(featured.id)}
-                    className="group relative aspect-[3/4] overflow-hidden rounded-arch bg-sand shadow-lift"
+                    className="group relative aspect-[3/4] overflow-hidden rounded-arch bg-sand shadow-lift sm:aspect-auto sm:h-full sm:min-h-[420px]"
                     aria-label={`Open the style of the day: ${featured.name}`}
                 >
                     <img src={featured.image} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
