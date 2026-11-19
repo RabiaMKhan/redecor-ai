@@ -42,8 +42,8 @@ const Footer = () => (
             ))}
             <div className="flex flex-col gap-3">
                 <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/50">Get in touch</h2>
-                <a href="mailto:rabiakhandev1@gmail.com" className="flex w-fit items-center gap-2 text-sm hover:text-paper">
-                    <Mail className="h-4 w-4" /> rabiakhandev1@gmail.com
+                <a href="mailto:rabiya.khan.dev@gmail.com" className="flex w-fit items-center gap-2 text-sm hover:text-paper">
+                    <Mail className="h-4 w-4" /> rabiya.khan.dev@gmail.com
                 </a>
                 <a
                     href="https://github.com/RabiaMKhan"
@@ -54,7 +54,7 @@ const Footer = () => (
                     GitHub <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
                 <Link to="/contact-us" className="w-fit text-sm hover:text-paper">
-                    Contact form
+                    Contact us
                 </Link>
             </div>
         </div>

@@ -13,6 +13,8 @@ import ottoman from '../../assets/images/styles/ottoman.webp';
 export const designStyles = [
     {
         id: 'modern',
+        mood: 'Light & airy',
+        bestFor: ['Living rooms', 'Kitchens', 'Small flats'],
         name: 'Modern',
         tagline: 'Clean lines, calm neutrals',
         description:
@@ -22,6 +24,8 @@ export const designStyles = [
     },
     {
         id: 'french',
+        mood: 'Light & airy',
+        bestFor: ['Bedrooms', 'Dining rooms'],
         name: 'French',
         tagline: 'Soft tones, vintage charm',
         description:
@@ -31,6 +35,8 @@ export const designStyles = [
     },
     {
         id: 'gothic',
+        mood: 'Dark & dramatic',
+        bestFor: ['Reading nooks', 'Bedrooms'],
         name: 'Gothic',
         tagline: 'Dramatic, dark and artful',
         description:
@@ -40,6 +46,8 @@ export const designStyles = [
     },
     {
         id: 'indian',
+        mood: 'Bold & colourful',
+        bestFor: ['Living rooms', 'Dining rooms'],
         name: 'Indian',
         tagline: 'Vibrant colour and craft',
         description:
@@ -49,6 +57,8 @@ export const designStyles = [
     },
     {
         id: 'african',
+        mood: 'Warm & earthy',
+        bestFor: ['Living rooms', 'Balconies'],
         name: 'African',
         tagline: 'Earthy, textured, grounded',
         description:
@@ -58,6 +68,8 @@ export const designStyles = [
     },
     {
         id: 'fusion',
+        mood: 'Warm & earthy',
+        bestFor: ['Living rooms', 'Home offices'],
         name: 'Fusion',
         tagline: 'Your own mix of styles',
         description:
@@ -67,6 +79,8 @@ export const designStyles = [
     },
     {
         id: 'japanese',
+        mood: 'Calm & natural',
+        bestFor: ['Bedrooms', 'Balconies'],
         name: 'Japanese',
         tagline: 'Natural wood, quiet order',
         description:
@@ -76,6 +90,8 @@ export const designStyles = [
     },
     {
         id: 'zen',
+        mood: 'Calm & natural',
+        bestFor: ['Bedrooms', 'Bathrooms'],
         name: 'Zen',
         tagline: 'Minimal and restful',
         description:
@@ -85,6 +101,8 @@ export const designStyles = [
     },
     {
         id: 'high-tech',
+        mood: 'Light & airy',
+        bestFor: ['Home offices', 'Kitchens'],
         name: 'High-Tech',
         tagline: 'Sleek, smart, futuristic',
         description:
@@ -94,6 +112,8 @@ export const designStyles = [
     },
     {
         id: 'ottoman',
+        mood: 'Bold & colourful',
+        bestFor: ['Lounges', 'Guest rooms'],
         name: 'Ottoman',
         tagline: 'Rich textiles, regal comfort',
         description:
@@ -102,6 +122,9 @@ export const designStyles = [
         palette: ['#F0E4CF', '#B3412F', '#1F4E5F', '#C99A3A', '#4A2C2A'],
     },
 ];
+
+// Mood groups used by the gallery filters, in display order
+export const styleMoods = ['Light & airy', 'Calm & natural', 'Warm & earthy', 'Bold & colourful', 'Dark & dramatic'];
 
 export const getStyleById = (id) => designStyles.find((style) => style.id === id);
 

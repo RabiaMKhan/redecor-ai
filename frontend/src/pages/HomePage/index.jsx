@@ -1,4 +1,5 @@
 import LandingSection from '../../components/HomePage/LandingSection';
+import RoomMarquee from '../../components/HomePage/RoomMarquee';
 import Services from '../../components/HomePage/Services';
 import Varities from '../../components/HomePage/Varities';
 import ResultPreview from '../../components/HomePage/ResultPreview';
@@ -11,6 +12,7 @@ const HomePage = () => {
     return (
         <>
             <LandingSection />
+            <RoomMarquee />
             <Services />
             <Varities />
             <ResultPreview />

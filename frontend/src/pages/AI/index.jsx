@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { FolderHeart, Lock, ScanSearch, ShieldCheck } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { Button, GuestButton, TextField } from '../../components/shared';
 import Dropzone, { checkImageFile } from '../../components/AI/Dropzone';
 import GeneratingState from '../../components/AI/GeneratingState';
 import { useIsAuthentication, usePageTitle } from '../../utils/utils';
+import { getStyleById } from '../../utils/DummyData';
 import { getErrorMessage } from '../../helpers/GlobalMethods';
 import resizeImage from '../../helpers/resizeImage';
 import axios from '../../redux/https';
@@ -32,7 +33,12 @@ const AI = () => {
     const navigate = useNavigate();
     const [file, setFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState('');
-    const [notes, setNotes] = useState('');
+    const [searchParams] = useSearchParams();
+    // Coming from the gallery ("Try this style on my room") pre-fills the notes
+    const [notes, setNotes] = useState(() => {
+        const style = getStyleById(searchParams.get('style'));
+        return style ? `I love the ${style.name} style, please lean that way.` : '';
+    });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const loadingRef = useRef(null);

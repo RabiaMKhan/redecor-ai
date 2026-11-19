@@ -11,3 +11,4 @@ export { default as Avatar } from './Avatar';
 export { default as Logo } from './Logo';
 export { default as SectionHeading } from './SectionHeading';
 export { default as GuestButton } from './GuestButton';
+export { default as Reveal } from './Reveal';

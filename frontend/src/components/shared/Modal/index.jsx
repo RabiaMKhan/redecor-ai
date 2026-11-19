@@ -41,7 +41,9 @@ const Modal = ({ open, onClose, title, children, size = 'md', hideTitle = false 
                 tabIndex={-1}
                 className={`relative max-h-[92vh] w-full ${widths[size] || widths.md} animate-fade-up overflow-y-auto rounded-t-3xl bg-paper shadow-lift focus:outline-none sm:rounded-3xl`}
             >
-                <div className={`sticky top-0 z-10 flex items-center justify-between gap-4 bg-paper/95 px-5 py-4 backdrop-blur sm:px-7 ${hideTitle ? 'pointer-events-none absolute right-0 bg-transparent' : 'border-b border-line'}`}>
+                <div
+                    className={`z-10 flex items-center justify-between gap-4 px-5 py-4 sm:px-7 ${hideTitle ? 'pointer-events-none absolute right-0 top-0' : 'sticky top-0 border-b border-line bg-paper/95 backdrop-blur'}`}
+                >
                     {!hideTitle && <h2 className="font-display text-xl text-ink">{title}</h2>}
                     <button
                         type="button"
