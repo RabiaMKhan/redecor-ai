@@ -1,5 +1,5 @@
 import { Check, Palette, ScanSearch, Sparkles } from 'lucide-react';
-import { SectionHeading } from '../../shared';
+import { Reveal, SectionHeading } from '../../shared';
 import boho from '../../../assets/images/boho.webp';
 
 const palette = [
@@ -20,9 +20,9 @@ const features = [
 const ResultPreview = () => (
     <section className="bg-sand/60">
         <div className="container-page grid items-center gap-14 py-20 lg:grid-cols-2 lg:py-28">
-            <div className="relative order-2 lg:order-1">
+            <Reveal className="relative order-2 lg:order-1">
                 <img src={boho} alt="A neutral boho living room with a rattan sofa and pampas grass" loading="lazy" className="aspect-[5/4] w-full rounded-3xl object-cover shadow-lift" />
-                <div className="card absolute -bottom-10 left-4 right-4 p-5 sm:left-auto sm:right-6 sm:w-80">
+                <div className="card absolute -bottom-10 left-4 right-4 animate-float p-5 sm:left-auto sm:right-6 sm:w-80">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Sample plan · Living room</p>
                     <div className="mt-3 grid grid-cols-5 gap-1.5">
                         {palette.map((color) => (
@@ -40,9 +40,9 @@ const ResultPreview = () => (
                         ))}
                     </ul>
                 </div>
-            </div>
+            </Reveal>
 
-            <div className="order-1 lg:order-2">
+            <Reveal delay={120} className="order-1 lg:order-2">
                 <SectionHeading
                     eyebrow="What you get"
                     title="Words that explain it, and a picture that shows it"
@@ -61,7 +61,7 @@ const ResultPreview = () => (
                         </li>
                     ))}
                 </ul>
-            </div>
+            </Reveal>
         </div>
     </section>
 );

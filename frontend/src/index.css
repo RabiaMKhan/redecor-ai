@@ -36,7 +36,12 @@
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
     }
   }
 }
@@ -60,6 +65,26 @@
 
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Fades a block in when it scrolls into view (see shared/Reveal) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Soft dotted texture for hero backgrounds */
+  .dot-grid {
+    background-image: radial-gradient(rgba(42, 36, 33, 0.09) 1px, transparent 1px);
+    background-size: 22px 22px;
   }
 
   .skeleton {

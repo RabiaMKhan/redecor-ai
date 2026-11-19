@@ -60,7 +60,7 @@ const ContactUs = () => {
                 </p>
                 <ul className="mt-10 space-y-5">
                     {[
-                        [Mail, 'Email', 'rabiakhandev1@gmail.com'],
+                        [Mail, 'Email', 'rabiya.khan.dev@gmail.com'],
                         [Clock, 'Reply time', 'Usually within 2 working days'],
                         [MapPin, 'Based in', 'Lahore, Pakistan'],
                     ].map(([Icon, label, value]) => (
